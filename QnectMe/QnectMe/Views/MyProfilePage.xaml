@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QnectMe.Views.MyProfilePage">
+    <ContentPage.Content>
+        <Grid Margin="5" x:Name="grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.ColumnSpan="3" Grid.Row="0" Text="My profile" HorizontalTextAlignment="Center" Font="Bold" FontSize="Medium"/>
+
+            <Label Grid.Row="1" Text="Name: "/>
+            <Label Grid.Row="2" Text="Phone number: "/>
+            <Label Grid.Row="3" Text="Company name: "/>
+            <Label Grid.Row="4" Text="Email: "/>
+            <Label Grid.Row="5" Text="Skype id: "/>
+            <Label Grid.Row="6" Text="LinkedIn id: "/>
+            <Label Grid.Row="7" Text="FaceBook id: "/>
+            <Label Grid.Row="8" Text="Vkontakte id: "/>
+
+            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" x:Name="labelName" />
+            <Entry Grid.Column="1" Grid.Row="1" Text="{Binding Name}" x:Name="entryName" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Number}" x:Name="labelNumber" />
+            <Entry Grid.Column="1" Grid.Row="2" Text="{Binding Number}" x:Name="entryNumber" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="3" Text="{Binding Company}" x:Name="labelCompany" />
+            <Entry Grid.Column="1" Grid.Row="3" Text="{Binding Company}" x:Name="entryCompany" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="4" Text="{Binding Email}" x:Name="labelEmail" />
+            <Entry Grid.Column="1" Grid.Row="4" Text="{Binding Email}" x:Name="entryEmail" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="5" Text="{Binding Skype}" x:Name="labelSkype" />
+            <Entry Grid.Column="1" Grid.Row="5" Text="{Binding Skype}" x:Name="entrySkype" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="6" Text="{Binding LI}" x:Name="labelLI" />
+            <Entry Grid.Column="1" Grid.Row="6" Text="{Binding LI}" x:Name="entryLI" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="7" Text="{Binding FB}" x:Name="labelFB" />
+            <Entry Grid.Column="1" Grid.Row="7" Text="{Binding FB}" x:Name="entryFB" IsEnabled="False" IsVisible="False"/>
+
+            <Label Grid.Column="1" Grid.Row="8" Text="{Binding VK}" x:Name="labelVK" />
+            <Entry Grid.Column="1" Grid.Row="8" Text="{Binding VK}" x:Name="entryVK" IsEnabled="False" IsVisible="False"/>
+
+            <Button x:Name="btn_Edit" Grid.Column="2" Grid.Row="9" Text="Edit" Clicked="btn_Edit_Clicked" HorizontalOptions="Center" BackgroundColor="YellowGreen"/>
+            <Button Grid.Column="1" Grid.Row="9" Text="Save" Clicked="btn_Save_Clicked" HorizontalOptions="Center" BackgroundColor="Green" IsVisible="False" IsEnabled="False" x:Name="btn_Save"/>
+
+            <!--<Label x:Name="labelSignIn" Grid.ColumnSpan="3" Grid.Row="10" Font="Bold" FontSize="Large" VerticalTextAlignment="Center"/>
+
+            <Button x:Name="btnGoogleSignIn" Text="Google sign-in" Grid.Column="0" Grid.Row="11" HorizontalOptions="Center" Clicked="GoogleLogInClicked"/>
+            <Button x:Name="btnMicrosoftSignIn" Text="Microsoft sign-in" Grid.Column="1" Grid.Row="11" HorizontalOptions="Center" Clicked="MicrosoftLogInClicked"/>
+            <ActivityIndicator x:Name="activityIndicator" Grid.Column="1" Grid.Row="11" Color="GreenYellow"/>
+            <Button x:Name="btnGoogleSignOut" Text="Google sign-out" Grid.Column="2" Grid.Row="11" HorizontalOptions="Center" Clicked="LogOutClicked"/>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

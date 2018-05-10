@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QnectMe.Views.CreateProfilePage" BackgroundColor="CadetBlue">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Column="0" Grid.Row="0" Source="name.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="0" Text="{Binding Name}" Keyboard="Text"/>
+
+            <Image Grid.Column="0" Grid.Row="1" Source="company.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="1" Text="{Binding Company}" Keyboard="Text"/>
+
+            <Image Grid.Column="0" Grid.Row="2" Source="tel.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="2" Text="{Binding Number}" Keyboard="Telephone"/>
+
+            <Image Grid.Column="0" Grid.Row="3" Source="email.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="3" Text="{Binding Email}" Keyboard="Email"/>
+
+            <Image Grid.Column="0" Grid.Row="4" Source="skype.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="4" Text="{Binding Skype}" />
+
+            <Image Grid.Column="0" Grid.Row="5" Source="li.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="5" Text="{Binding LI}" />
+
+            <Image Grid.Column="0" Grid.Row="6" Source="fb.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="6" Text="{Binding FB}" />
+
+            <Image Grid.Column="0" Grid.Row="7" Source="vk.png" VerticalOptions="Center"/>
+            <Entry Grid.Column="1" Grid.Row="7" Text="{Binding VK}" />
+
+            <Button Grid.ColumnSpan="2" Grid.Row="8" Text="Save" Clicked="Button_Clicked" HorizontalOptions="Center" BackgroundColor="LightGreen" Font="Bold" TextColor="Black"/>
+
+            <!--<Image Grid.Column="0" Grid.Row="9" x:Name="image"/>
+            <Button Grid.Column="1" Grid.Row="9" Text="Choose photo" Clicked="ChoosePhoto_Clicked" HorizontalOptions="Center"/>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

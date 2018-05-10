@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QnectMe"
+             x:Class="QnectMe.MainPage">
+
+    <StackLayout>
+        <Button Text="My profile" Clicked="btn_myProfile_Clicked" HorizontalOptions="Center"/>
+        <Button x:Name="btn_generateQR" Text="Generate QR" Clicked="btn_generateQR_Clicked" IsVisible="False" HorizontalOptions="Center"/>
+        <Button x:Name="btn_scanQR" Text="Scan QR" Clicked="btn_readQR_Clicked" HorizontalOptions="Center" IsVisible="False" />
+        <Button Text="MyQ" HorizontalOptions="Center" Clicked="MyQ_Clicked"/>
+        <!--<Button Text="Create event" Clicked="GroupByEventClicked" HorizontalOptions="Center"/>
+            <Entry x:Name="eventName" IsEnabled="False" IsVisible="False"/>-->
+    </StackLayout>
+
+</ContentPage>

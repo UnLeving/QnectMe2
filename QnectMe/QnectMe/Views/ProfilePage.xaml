@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QnectMe.Views.QProfilePage" BackgroundColor="CadetBlue">
+    <ContentPage.Content>
+        <Grid Margin="5" x:Name="grid" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.ColumnSpan="3" Grid.Row="0" Text="MyQ" HorizontalTextAlignment="Center" Font="Bold" FontSize="Medium"/>
+
+            <Label Grid.Row="1" Text="Name: "/>
+            <Label Grid.Row="2" Text="Phone number: "/>
+            <Label Grid.Row="3" Text="Company: "/>
+            <Label Grid.Row="4" Text="Email: "/>
+            <Label Grid.Row="5" Text="Skype: "/>
+            <Label Grid.Row="6" Text="LinkedIn id: "/>
+            <Label Grid.Row="7" Text="FaceBook id: "/>
+
+            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Name}" x:Name="labelName" />
+            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Number}" TextColor="Blue" x:Name="labelNumber" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LabelNumberTappedEvent"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="1" Grid.Row="3" Text="{Binding Company}" x:Name="labelCompany" />
+            <Label Grid.Column="1" Grid.Row="4" Text="{Binding Email}" x:Name="labelEmail" />
+            <Label Grid.Column="1" Grid.Row="5" Text="{Binding Skype}" x:Name="labelSkype" />
+            <Label Grid.Column="1" Grid.Row="6" Text="{Binding LI}" TextColor="Blue" x:Name="labelLI">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LabelLiTappedEvent"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="1" Grid.Row="7" Text="{Binding FB}" TextColor="Blue" x:Name="labelFB">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LabelFBTappedEvent"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
