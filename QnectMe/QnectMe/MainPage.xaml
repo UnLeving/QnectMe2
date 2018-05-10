@@ -8,7 +8,7 @@
         <Button Text="My profile" Clicked="btn_myProfile_Clicked" HorizontalOptions="Center"/>
         <Button x:Name="btn_generateQR" Text="Generate QR" Clicked="btn_generateQR_Clicked" IsVisible="False" HorizontalOptions="Center"/>
         <Button x:Name="btn_scanQR" Text="Scan QR" Clicked="btn_readQR_Clicked" HorizontalOptions="Center" IsVisible="False" />
-        <Button Text="MyQ" HorizontalOptions="Center" Clicked="MyQ_Clicked"/>
+        <Button x:Name="btn_myqlist" Text="MyQ" HorizontalOptions="Center" Clicked="MyQ_Clicked" IsVisible="False"/>
         <!--<Button Text="Create event" Clicked="GroupByEventClicked" HorizontalOptions="Center"/>
             <Entry x:Name="eventName" IsEnabled="False" IsVisible="False"/>-->
     </StackLayout>

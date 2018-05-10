@@ -9,12 +9,12 @@ using Xamarin.Forms;
 
 namespace QnectMe
 {
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
 
         protected override void OnAppearing()
         {
@@ -25,6 +25,10 @@ namespace QnectMe
                 btn_scanQR.IsVisible = true;
             }
             else btn_generateQR.IsVisible = false;
+
+            if (App.DB.Get().Count() > 0)
+                btn_myqlist.IsVisible = true;
+            else btn_myqlist.IsVisible = false;
 
             base.OnAppearing();
         }
