@@ -6,7 +6,7 @@ using ZXing.Net.Mobile.Forms;
 
 namespace QnectMe.Classes
 {
-    public static class QR
+    public class QR
     {
         public static ZXingBarcodeImageView Generate()
         {
@@ -21,7 +21,7 @@ namespace QnectMe.Classes
             return qr;
         }
 
-        public async static Task<bool> ScanAsync()
+        public async void ScanAsync()
         {
             var data = await DependencyService.Get<Interfaces.IQRScanner>().ScanAsync();
 
@@ -29,20 +29,12 @@ namespace QnectMe.Classes
             {
                 Account json = JsonConvert.DeserializeObject<Account>(data);
                 App.DB.Create(json);
-                return true;
+                IsSuccessfullyAdded(true);
             }
-            return false;
+            else IsSuccessfullyAdded(false);
         }
 
-        //public static void LaunchIntents(List<Account> list)
-        //{
-        //    foreach (var item in list)
-        //    {
-        //        if (item.Number != "")
-        //            PhoneContact.CreateContact(item);
-        //        else
-        //            SocialNetwork.SendRequest(item);
-        //    }
-        //}
+        public delegate void ScannedAddedHandler(bool isAdded);
+        public event ScannedAddedHandler IsSuccessfullyAdded;
     }
 }

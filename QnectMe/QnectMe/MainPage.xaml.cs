@@ -26,9 +26,8 @@ namespace QnectMe
             }
             else btn_generateQR.IsVisible = false;
 
-            if (App.DB.Get().Count() > 0)
-                btn_myqlist.IsVisible = true;
-            else btn_myqlist.IsVisible = false;
+            if (App.DB.Get().Count() == 0)
+                btn_myqlist.IsVisible = false;
 
             base.OnAppearing();
         }
@@ -38,10 +37,22 @@ namespace QnectMe
             await Navigation.PushModalAsync(new QRPage());
         }
 
-        async void btn_readQR_Clicked(object sender, EventArgs e)
+        void btn_readQR_Clicked(object sender, EventArgs e)
         {
-            bool isScannedSomething = await QR.ScanAsync();
+            QR qR = new QR();
+            qR.IsSuccessfullyAdded += QR_IsSuccessfullyAdded;
+            qR.ScanAsync();
+        }
 
+        private void QR_IsSuccessfullyAdded(bool isAdded)
+        {
+            if (isAdded)
+            {
+                DisplayAlert("New scan", "New Q successfully added", "Ok");
+                btn_myqlist.IsVisible = true;
+            }
+            else
+                DisplayAlert("New scan", "New Q NOT added", "Ok");
         }
 
         async void btn_myProfile_Clicked(object sender, EventArgs e)
@@ -53,11 +64,5 @@ namespace QnectMe
         {
             await Navigation.PushModalAsync(new TESTPage1());
         }
-
-        //private void GroupByEventClicked(object sender, EventArgs e)
-        //{
-        //    eventName.IsEnabled = true;
-        //    eventName.IsVisible = true;
-        //}
     }
 }
