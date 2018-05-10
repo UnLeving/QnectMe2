@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/QnectMe.NetCore20/QnectMe.NetCore20.csproj

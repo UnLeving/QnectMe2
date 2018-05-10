@@ -1,0 +1,63 @@
+﻿@model QnectMe.NetCore20.Models.UserProfileModel
+
+@{
+    ViewData["Title"] = "My profile";
+}
+<h2>My profile</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Skype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Skype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LI)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LI)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VK)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VK)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-default">Edit</a>
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>
